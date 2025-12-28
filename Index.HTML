@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Listening Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>🎵 Listening Game</h1>
+
+    <p class="instruction">
+      Press <b>Play</b>, type the number of the song that changes instrument
+      half way, then press <b>Enter</b> or the <b>Done</b> button.
+    </p>
+
+    <div class="songs">
+      <button onclick="playSong(1)">▶ Song 1</button>
+      <button onclick="playSong(2)">▶ Song 2</button>
+      <button onclick="playSong(3)">▶ Song 3</button>
+    </div>
+
+    <input
+      type="number"
+      id="answer"
+      placeholder="Enter song number"
+      onkeypress="handleEnter(event)"
+    >
+
+    <button class="done-btn" onclick="checkAnswer()">Done</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>  
